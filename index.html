@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+  <style>
+    body {
+      background-color: #000;
+    }
+    img {
+      display: block;
+      height: 200px;
+    }
+
+    .slider {
+      position: relative;
+      width: 463px;
+      height: 200px;
+      overflow: hidden;
+    }
+
+
+    #background, #middle, #top {
+      width: 10000px;
+      font-size: 0;
+      position: absolute;
+      transition: 1.5s all ease-in-out;
+    }
+
+    .slider.step1 #background {
+      left: 0;
+    }
+
+    .slider.step1 #middle {
+      left: 0;
+    }
+
+    .slider.step1 #top {
+      left: 0;
+    }
+
+
+    .slider.step2 #background {
+      left: calc((-2778px / 7) - 75px);
+    }
+
+    .slider.step2 #middle {
+      left: calc(-4181px / 7);
+    }
+
+    .slider.step2 #top {
+      left: calc(-5571px / 7 - 50px);
+    }
+
+
+    .slider.step3 #background {
+      left: calc((-2778px / 7 * 2) - 154px);
+    }
+
+    .slider.step3 #middle {
+      left: calc((-4181px / 7 * 2) - 150px);
+    }
+
+    .slider.step3 #top {
+      left: calc((-5571px / 7 * 2) - 279px);
+    }
+
+
+    .slider.step4 #background {
+      left: calc((-2778px / 7 * 3) - 204px);
+    }
+
+    .slider.step4 #middle {
+      left: calc((-4181px / 7 * 3) - 300px);
+    }
+
+    .slider.step4 #top {
+      left: calc((-5571px / 7 * 3) - 411px);
+    }
+
+    .slider.step5 #background {
+      left: calc((-2778px / 7 * 4) - 274px);
+    }
+
+    .slider.step5 #middle {
+      left: calc((-4181px / 7 * 4) - 370px);
+    }
+
+    .slider.step5 #top {
+      left: calc((-5571px / 7 * 4) - 490px);
+    }
+
+
+    .slider.step6 #background {
+      left: calc((-2778px / 7 * 5) - 330px);
+    }
+
+    .slider.step6 #middle {
+      left: calc((-4181px / 7 * 5) - 470px);
+    }
+
+    .slider.step6 #top {
+      left: calc((-5571px / 7 * 5) - 665px);
+    }
+
+
+    .slider.step7 #background {
+      left: -2778px;
+    }
+
+    .slider.step7 #middle {
+      left: -4181px;
+    }
+
+    .slider.step7 #top {
+      left: -5571px;
+    }
+    
+
+    #background {
+      z-index: 1;
+    }
+
+    #middle {
+      z-index:2;
+    }
+
+    #top {
+      z-index: 3;
+    }
+
+    .slide {
+      height: 200px;
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+    }
+
+    #background .slide {
+      width: 463px;
+    }
+
+    #middle .slide {
+      width: 697px;
+    }
+    
+    #middle .slide:first-child {
+      width: 463px;
+    }
+    
+    #middle .slide img {
+      position: relative;
+      left:-463px;
+    }
+
+    #top .slide {
+      width: 927px;
+    }
+
+    #top .slide:first-child {
+      width: 473px;
+    }
+
+    #top .slide img {
+      position: relative;
+      left: -1160px;
+    }
+
+    #top .slide:first-child {
+      width: 473px;
+    }
+
+    #top .slide:first-child img {
+      left: -927px;
+    }
+
+    .controls {
+      width: 463px;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    button {
+      border: 1px solid white;
+      padding: 5px;
+      width: 30px;
+      height: 30px;
+      border-radius: 100px;
+      background-color: transparent;
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slider step1">
+    <div id="background">
+      <div class="slide">
+        <img src="a.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="b.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="c.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="e.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="g.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="d.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="f.png" alt="#">
+      </div>
+    </div>
+    <div id="middle">
+      <div class="slide">
+        <img src="a.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="b.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="c.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="e.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="g.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="d.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="f.png" alt="#">
+      </div>
+    </div>
+    <div id="top">
+      <div class="slide">
+        <img src="a.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="b.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="c.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="e.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="g.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="d.png" alt="#">
+      </div>
+      <div class="slide">
+        <img src="f.png" alt="#">
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button data-step="1">1</button>
+    <button data-step="2">2</button>
+    <button data-step="3">3</button>
+    <button data-step="4">4</button>
+    <button data-step="5">5</button>
+    <button data-step="6">6</button>
+    <button data-step="7">7</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      var $slider = document.querySelector(".slider")
+
+      document.querySelectorAll("button").forEach(($b) => {
+        $b.addEventListener("click", (e) => {
+          $slider.className = "slider step" + e.currentTarget.dataset.step
+        })
+      })
+    })
+  </script>
+  
+</body>
+</html>
